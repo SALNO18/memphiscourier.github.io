@@ -1,0 +1,188 @@
+.mem-columns>.column {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    padding: 20px;
+    background: linear-gradient(to right, #2a3886, #60c2ab);
+}
+
+header {
+    min-height: 100vh;
+}
+
+hr {
+    background: linear-gradient(to right, #2a3886, #60c2ab);
+    margin: 0;
+    height: 10px;
+}
+
+.mem-block {
+    display: block;
+    padding: 15px;
+}
+
+.mem-header {
+    background: linear-gradient(#2a3886, #467f98);
+}
+
+.mem-navbar-menu {
+    background-color: transparent;
+}
+
+.mem-header-ham-menu {
+    color: white;
+}
+
+.mem-about-title {
+    color: #2a3886;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.mem-services-title {
+    color: #2a3886;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.mem-tracking-subtitle {
+    color: white;
+    font-size: calc(12px + 1.5vw);
+    margin: 0 auto;
+}
+
+.mem-about-subtitle {
+    color: #2a3886;
+}
+
+.mem-service-box {
+    background: url(assets/service-background.png) no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    min-width: 300px;
+}
+
+.mem-quote {
+    background: #ebebeb url('assets/quote.png') no-repeat center center;
+}
+
+.mem-quote-title {
+    position: absolute;
+}
+
+.mem-quote-image {
+    position: absolute;
+    right: 10%;
+    top: 30%;
+}
+
+.mem-tracking-title {
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.mem-section-about {
+    padding-top: 12px;
+}
+
+.mem-section-contact {
+    background-color: white;
+}
+
+.mem-columns-about {
+    justify-content: center;
+    align-items: center;
+}
+
+.mem-section-services {
+    background-color: #d5df95;
+}
+
+.mem-columns-services {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.mem-columns-tracking {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.mem-section-tracking {
+    background: url(assets/tracking.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.mem-header-arrow {
+    padding-bottom: 35px;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.mem-header-navbar-menu {
+    padding: 0 4vw;
+    font-size: calc(12px + 0.5vw);
+    color: white;
+}
+
+.mem-header-title {
+    position: absolute;
+    font-style: italic;
+    margin-left: 4vw;
+    top: 0;
+    margin-top: 5vh;
+    z-index: 1;
+    width: 58vw;
+    font-size: 5vw;
+    color: white;
+}
+
+.mem-header-container {
+    position: relative;
+    min-height: 70vh;
+}
+
+.mem-header-image {
+    min-width: 450px;
+    width: 65vw;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.mem-navbar {
+    background-color: transparent;
+}
+
+.mem-header-logo {
+    min-height: 5vw;
+}
+
+@media only screen and (min-width: 1087px) {
+    .mem-navbar {
+        padding-top: 2vw;
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+}
+
+@media only screen and (max-width: 1087px) {
+    .mem-tracking-title {
+        font-size: 8vw;
+    }
+}
