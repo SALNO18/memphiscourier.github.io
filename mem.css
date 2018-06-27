@@ -69,6 +69,18 @@ hr {
     min-width: 300px;
 }
 
+.mem-button {
+    padding: 20px;
+    font-style: italic;
+    font-size: calc(16px + 1.5vw);
+    color: white;
+    background: url(assets/button.png) no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+}
+
 .mem-quote {
     background: #ebebeb url('assets/quote.png') no-repeat center center;
 }
