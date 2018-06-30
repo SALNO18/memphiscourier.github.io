@@ -6,6 +6,20 @@
     align-items: center;
 }
 
+.mem-header-group {
+    text-align: center;
+    line-height: 50px;
+    background: white;
+    font-style: italic;
+    font-weight: bold;
+    color: #2a3886;
+}
+
+.mem-header-group-img {
+    margin-left: 10px;
+    vertical-align: middle
+}
+
 footer {
     padding: 20px;
     background: linear-gradient(to right, #2a3886, #60c2ab);
@@ -62,17 +76,26 @@ hr {
 
 .mem-service-box {
     background: url(assets/service-background.png) no-repeat center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 350px;
+    min-height: 150px;
     -webkit-background-size: contain;
     -moz-background-size: contain;
     -o-background-size: contain;
     background-size: contain;
-    min-width: 300px;
+}
+
+.mem-service-img {
+    max-height: 100px;
+    width: auto;
 }
 
 .mem-button {
     padding: 20px;
     font-style: italic;
-    font-size: calc(16px + 1.5vw);
+    font-size: calc(16px + .8vw);
     color: white;
     background: url(assets/button.png) no-repeat center center;
     -webkit-background-size: contain;
