@@ -173,30 +173,36 @@
         var scroll = new SmoothScroll('a[href*="#"]');
     </script>
     <script>
-        var menu = document.getElementById("menu")
-        var menuActive = "is-active"
 
         function isHover(e) {
             return (e.parentElement.querySelector(':hover') === e);
         }
-        var menuBurger = document.getElementById('menu-burger');;
+
         document.addEventListener('mousemove', function checkHover() {
-            var hovered = isHover(menuBurger);
-            if (hovered !== checkHover.hovered) {
-                if (hovered) {
-                    menu.className += ' ' + menuActive;
-                } else {
-                    var classes = menu.className.split(' ');
-                    for (i = 0; i < classes.length; ++i) {
-                        if (classes[i] == menuActive) {
-                            classes.splice(i, 1);
-                            --i;
+            setTimeout(
+                function () {
+                    var menu = document.getElementById("menu");
+                    var menuActive = "is-active";
+                    var menuBurger = document.getElementById('menu-burger');
+                    var hovered = isHover(menuBurger);
+                    if (hovered !== checkHover.hovered) {
+                        if (hovered) {
+                            menu.className += ' ' + menuActive;
+                        } else {
+                            var classes = menu.className.split(' ');
+                            for (i = 0; i < classes.length; ++i) {
+                                if (classes[i] == menuActive) {
+                                    classes.splice(i, 1);
+                                    --i;
+                                }
+                            }
+                            menu.className = classes.join(' ');
                         }
+                        checkHover.hovered = hovered;
                     }
-                    menu.className = classes.join(' ');
                 }
-                checkHover.hovered = hovered;
-            }
+                , 0)
+
         });
 
     </script>
