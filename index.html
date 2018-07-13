@@ -141,7 +141,7 @@
         <div class="container">
             <div class="columns  mem-columns mem-columns-tracking">
                 <div class="column">
-                    <h1 class="title mem-tracking-title">R A S T R E A M E N T O</h1>
+                    <h1 class="subtitle mem-tracking-title">R A S T R E A M E N T O</h1>
                     <h2 class="mem-tracking-subtitle">Acompanhe a sua carga em tempo real.</h2>
                     <a href="http://tracking.memphiscourier.com.br/" class="mem-button">RASTREAR</a>
                 </div>
@@ -171,14 +171,14 @@
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14/dist/smooth-scroll.polyfills.min.js"></script>
     <script>
         var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+    <script>
         var menu = document.getElementById("menu")
         var menuActive = "is-active"
 
         function isHover(e) {
             return (e.parentElement.querySelector(':hover') === e);
         }
-
-
         var menuBurger = document.getElementById('menu-burger');;
         document.addEventListener('mousemove', function checkHover() {
             var hovered = isHover(menuBurger);
