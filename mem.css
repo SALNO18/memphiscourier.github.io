@@ -1,3 +1,7 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
 .mem-columns>.column {
     min-height: 100vh;
     display: flex;
@@ -38,6 +42,10 @@ hr {
 .mem-block {
     display: block;
     padding: 15px;
+}
+
+.mem-padding {
+    padding: 5vw;
 }
 
 .mem-header {

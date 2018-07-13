@@ -28,14 +28,14 @@
                 <a class="navbar-item" href="https://memphiscourier.com.br">
                     <img src="assets/logo.png" alt="Memphis logo" class="mem-header-logo ">
                 </a>
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <a id="menu-burger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
                     <span aria-hidden="true" class="mem-header-ham-menu"></span>
                     <span aria-hidden="true" class="mem-header-ham-menu"></span>
                     <span aria-hidden="true" class="mem-header-ham-menu"></span>
                 </a>
             </div>
 
-            <div class="navbar-menu mem-navbar-menu">
+            <div id="menu" class="navbar-menu mem-navbar-menu">
                 <div class="navbar-end">
                     <a data-scroll href="#section-about" class="navbar-item mem-header-navbar-menu">
                         QUEM SOMOS
@@ -65,19 +65,21 @@
 
         <div class="columns mem-columns" style="padding-bottom: 12px;">
             <div class="column">
-                <div class="mem-block">
+                <div class="mem-block mem-padding">
                     <h1 class="title mem-about-title">QUEM SOMOS</h1>
                     <p>Profissionais com mais de 30 anos de experiência no transporte aéreo de cargas. Trabalhamos em conjunto
                         com nossos clientes para resolver as suas necessidades através de soluções objetivas, eficazes e
                         de baixo custo.
                     </p>
                     <br/>
-                    <h2 class="subtitle mem-about-subtitle">Nossa Especialização:</h2>
-                    <p>Transporte aéreo de qualquer tipo de material de Aeronaves e Helicópteros em geral.</p>
+                    <h2 class="subtitle mem-about-subtitle">Nossa Expecialização:</h2>
+                    <p>A Memphis Courier é especialista em transporte internacional e entregas expressas. Oferecemos diversos
+                        serviços para seus documentos e encomendas, desde o preparo do seu envio, o acompanhamento dele até
+                        a entrega porta a porta, tudo de acordo com as suas necessidades.</p>
                 </div>
             </div>
             <div class="column mem-quote">
-                <div class="mem-block">
+                <div class="mem-block mem-padding">
                     <h1 class="title is-4e">Visamos oferecer o serviço adequado, com os menores custos, riscos e lead time ajustado a sua demanda.</h1>
                 </div>
             </div>
@@ -115,6 +117,21 @@
                         </div>
                     </div>
 
+                    <div class="columns is-centered">
+                        <div class="column is-narrow">
+                            <div class="mem-service-box">
+                                <img src="assets/service-liberty.png" width="100px" class="mem-service-img" />
+                            </div>
+                            <p class="mem-services-title">CONSULTORIA EM PROCESSOS DE LIBERAÇÃO</p>
+                        </div>
+                        <div class="column is-narrow">
+                            <div class="mem-service-box">
+                                <img src="assets/service-liberty-worldwide.png" width="100px" class="mem-service-img" />
+                            </div>
+                            <p class="mem-services-title">LIBERAÇÃO ALFANDEGÁRIA DE REMESSAS EXPRESSAS</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -147,13 +164,41 @@
             <img src="assets/logo.png" alt="Memphis logo" width="20%">
         </a>
     </footer>
-
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" integrity="sha256-zIG416V1ynj3Wgju/scU80KAEWOsO5rRLfVyRDuOv7Q="
         crossorigin="anonymous" />
     <link rel="stylesheet" href="mem.css" />
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14/dist/smooth-scroll.polyfills.min.js"></script>
     <script>
         var scroll = new SmoothScroll('a[href*="#"]');
+        var menu = document.getElementById("menu")
+        var menuActive = "is-active"
+
+        function isHover(e) {
+            return (e.parentElement.querySelector(':hover') === e);
+        }
+
+
+        var menuBurger = document.getElementById('menu-burger');;
+        document.addEventListener('mousemove', function checkHover() {
+            var hovered = isHover(menuBurger);
+            if (hovered !== checkHover.hovered) {
+                if (hovered) {
+                    menu.className += ' ' + menuActive;
+                } else {
+                    var classes = menu.className.split(' ');
+                    for (i = 0; i < classes.length; ++i) {
+                        if (classes[i] == menuActive) {
+                            classes.splice(i, 1);
+                            --i;
+                        }
+                    }
+                    menu.className = classes.join(' ');
+                }
+                checkHover.hovered = hovered;
+            }
+        });
+
     </script>
 </body>
 
