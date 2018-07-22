@@ -89,49 +89,50 @@
 
     <section id="section-services" class="mem-section mem-section-services">
         <hr/>
+
         <div class="container">
-            <div class="columns mem-columns mem-columns-services">
-                <div class="column">
-                    <h1 class="title mem-services-title">S E R V I Ç O S</h1>
-                    <p>Conectamos todas as capitais e principais regiões metropolitanas utilizando as mais importantes companhias
+            <div class="columns mem-columns mem-columns-services" style="    min-height: 100vh;
+            align-items: center;
+            justify-content: center;">
+                <div class="column" style="display:block; min-height: 100px;">
+                    <h1 class="title mem-services-title-main">S E R V I Ç O S</h1>
+                    <p class="mem-services-subtitle">Conectamos todas as capitais e principais regiões metropolitanas utilizando as mais importantes companhias
                         aéreas e transportadores rodoviários.</p>
                     <br/>
-                    <div class="columns is-centered">
-                        <div class="column is-narrow">
-                            <div class="mem-service-box">
-                                <img src="assets/service-phone.png" width="100px" class="mem-service-img" />
+                    <div>
+                        <div class="carousel" data-flickity='{ "autoPlay": true }'>
+                            <div class="carousel-cell">
+                                <div class="mem-service-box">
+                                    <img src="assets/service-phone.png" width="100px" class="mem-service-img" />
+                                </div>
+                                <p class="mem-services-title">CUSTOMER SERVICE</p>
                             </div>
-                            <p class="mem-services-title">CUSTOMER SERVICE</p>
-                        </div>
-                        <div class="column is-narrow">
-                            <div class="mem-service-box">
-                                <img src="assets/service-tracking.png" width="100px" class="mem-service-img" />
+                            <div class="carousel-cell">
+                                <div class="mem-service-box">
+                                    <img src="assets/service-tracking.png" width="100px" class="mem-service-img" />
+                                </div>
+                                <p class="mem-services-title">SISTEMAS DE ACOMPANHAMENTO</p>
                             </div>
-                            <p class="mem-services-title">SISTEMAS DE ACOMPANHAMENTO</p>
-                        </div>
-                        <div class="column is-narrow">
-                            <div class="mem-service-box">
-                                <img src="assets/service-delivery.png" width="100px" class="mem-service-img" />
+                            <div class="carousel-cell">
+                                <div class="mem-service-box">
+                                    <img src="assets/service-delivery.png" width="100px" class="mem-service-img" />
+                                </div>
+                                <p class="mem-services-title">ENTREGAS PORTA A PORTA</p>
                             </div>
-                            <p class="mem-services-title">ENTREGAS PORTA A PORTA</p>
+                            <div class="carousel-cell">
+                                <div class="mem-service-box">
+                                    <img src="assets/service-liberty.png" width="100px" class="mem-service-img" />
+                                </div>
+                                <p class="mem-services-title">CONSULTORIA EM PROCESSOS DE LIBERAÇÃO</p>
+                            </div>
+                            <div class="carousel-cell">
+                                <div class="mem-service-box">
+                                    <img src="assets/service-liberty-worldwide.png" width="100px" class="mem-service-img" />
+                                </div>
+                                <p class="mem-services-title">LIBERAÇÃO ALFANDEGÁRIA DE REMESSAS EXPRESSAS</p>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="columns is-centered">
-                        <div class="column is-narrow">
-                            <div class="mem-service-box">
-                                <img src="assets/service-liberty.png" width="100px" class="mem-service-img" />
-                            </div>
-                            <p class="mem-services-title">CONSULTORIA EM PROCESSOS DE LIBERAÇÃO</p>
-                        </div>
-                        <div class="column is-narrow">
-                            <div class="mem-service-box">
-                                <img src="assets/service-liberty-worldwide.png" width="100px" class="mem-service-img" />
-                            </div>
-                            <p class="mem-services-title">LIBERAÇÃO ALFANDEGÁRIA DE REMESSAS EXPRESSAS</p>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
@@ -141,7 +142,7 @@
         <div class="container">
             <div class="columns  mem-columns mem-columns-tracking">
                 <div class="column">
-                    <h1 class="title is-5 mem-tracking-title">R A S T R E A M E N T O</h1>
+                    <h1 class="title mem-tracking-title">R A S T R E A M E N T O</h1>
                     <h2 class="mem-tracking-subtitle">Acompanhe a sua carga em tempo real.</h2>
                     <a href="http://tracking.memphiscourier.com.br/" class="mem-button">RASTREAR</a>
                 </div>
@@ -168,6 +169,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" integrity="sha256-zIG416V1ynj3Wgju/scU80KAEWOsO5rRLfVyRDuOv7Q="
         crossorigin="anonymous" />
     <link rel="stylesheet" href="mem.css" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14/dist/smooth-scroll.polyfills.min.js"></script>
     <script>
         var scroll = new SmoothScroll('a[href*="#"]');
